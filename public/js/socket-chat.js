@@ -24,7 +24,8 @@ socket.on('connect', function() {
 
     //uso esto para que cuando me conecte le llegue esto al server
     socket.emit('entrarChat', usuario , function(resp) {
-        console.log('users conectados ', resp)
+        // console.log('users conectados ', resp)
+        renderizarUsuarios(resp)
     }) //si me conecto, ejecuto un callback (3er arg) que es la respuesta del server. Me interesa saber lista de users conectados
 });
 
@@ -39,15 +40,16 @@ socket.on('disconnect', function() {
 // Escuchar información
 socket.on('crearMensaje', function(mensaje) {
 
-    console.log('Servidor:', mensaje);
-
+    // console.log('Servidor:', mensaje);
+    renderizarMensajes(mensaje, false)
+    scrollBottom()
 });
 
 
 //Escuchar cambios de usuarios, cuando un user entra o sale del chat.
 socket.on('listaPersonas', function(personas) {
 
-    console.log(personas); //lo imprime en la consola del cliente
+    renderizarUsuarios(personas); 
 
 });
 

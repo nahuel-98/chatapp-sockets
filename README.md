@@ -1,9 +1,15 @@
-# Notas:
+Las funcionalidades del proyecto consisten en:
 
-Este es un pequeño servidor de express listo para ejecutarse y servir la carpeta public en la web.
+* Envío de mensajes a través de grupos de chat con múltiples participantes (chatrooms)
 
-Recuerden que deben de reconstruir los módulos de node con el comando
+* Notificaciones de ingreso y salida de usuarios al chatroom.
 
+* Status de disponibilidad en línea
+
+![image](https://user-images.githubusercontent.com/92251058/209352454-eaa7f2c4-3531-4e5f-9216-c452e791b74e.png)
+
+Para ejecutar el proyecto:
 ```
 npm install
+npm start
 ```
